@@ -1,0 +1,59 @@
+# general settings for HSI denoising training
+name: s2s_test_4
+arch: s2s
+prefix: s2s_test_4
+mode: train
+
+# net settings
+gpu_ids: 3
+batchSize: 8
+lr: !!float 1e-3
+cpu: False
+manual_seed: 2018
+threads: 1
+
+# model settings
+local_range: 1
+region_num: 3
+hidden_dim: 14
+
+# test settings
+testDir: /data3/jiahua/ly/test_data/icvl_test_complex/512_mixture
+
+# training settings
+train:
+  total_epochs: 90
+  checkpoints_per_save: 10
+  Datasets: 
+    type: icvl
+    trainDir: /data3/jiahua/ly/train_data/icvl_train/train.db/
+    valDir: /data3/jiahua/ly/test_data/icvl_test_complex/512_mixture/
+    val_matSize: 5
+  scheduler:
+    type: MultiStepLR
+    milestones: [0 , 5 , 15, 25, 50, 90]
+    gammas: [1 , 0.5 , 0.2, 0.1 ,0.05, 0.01]
+  
+  multiDatasets:
+    type: False
+    noiseType: ['gaussian','blind','complex']
+    # stones: [30,80,110]
+    stones: [2,3,110] # for test
+
+  resume_opt:
+    resume: False
+    resumePath: /home/jiahua/s2s_release/checkpoints/s2s_complex.pth
+
+  optim_g:
+    type: Adam
+    weight_decay: 0
+    betas: [0.9, 0.99]
+
+  loss_opt:
+    type: l1 # ['l1', 'l2', 'smooth_l1', 'ssim', 'l2_ssim','l2_sam','cons','cons_l2','char','fidloss']
+    loss_weight: 1.0 
+    reduction: mean
+
+  clip: !!float 1e6
+  noiseType: complex # ['blind','complex','noniid','mixture']
+  save_path: /data3/jiahua/fidnet_cmp_checkpoints
