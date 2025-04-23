@@ -1,6 +1,6 @@
 ## [ECCV 2024] Region-Aware Sequence-to-Sequence Learning for Hyperspectral Denoising
 
-The official PyTorch implementation of our [RAS2S](https://link.springer.com/chapter/10.1007/978-3-031-73027-6_13).
+The official PyTorch implementation of RAS2S](https://link.springer.com/chapter/10.1007/978-3-031-73027-6_13).
 
 ## Install the environment
 
