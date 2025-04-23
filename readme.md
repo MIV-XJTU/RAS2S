@@ -25,6 +25,8 @@ Other competing methods can also be placed in the same folder.
 ### Download
 #### The entire ICVL dataset download from  [here](https://icvl.cs.bgu.ac.il/hyperspectral/).
 
+And thanks to [QRNN3D]([Vandermode/QRNN3D: 3D Quasi-Recurrent Neural Network for Hyperspectral Image Denoising (TNNLS 2020)](https://github.com/Vandermode/QRNN3D)). The division and processing of dataset in this paper are consistent with theirs.
+
 ### Processing
 
 #### The training and testing samples are listed in the following file:
