@@ -3,7 +3,7 @@
 The official PyTorch implementation of our [RAS2S](https://link.springer.com/chapter/10.1007/978-3-031-73027-6_13).
 
 ## Install the environment
-TODO
+Move to `requirements.yaml`.
 
 ## Model
 The primary implementation of the RAS2S can be found in the following directory:
