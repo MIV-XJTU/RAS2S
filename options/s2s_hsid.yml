@@ -1,11 +1,11 @@
 # general settings for HSI denoising training
-name: s2s_test_4
+name: s2s_train
 arch: s2s
-prefix: s2s_test_4
+prefix: s2s_train
 mode: train
 
 # net settings
-gpu_ids: 3
+gpu_ids: 0
 batchSize: 8
 lr: !!float 1e-3
 cpu: False
@@ -18,7 +18,7 @@ region_num: 3
 hidden_dim: 14
 
 # test settings
-testDir: /data3/jiahua/ly/test_data/icvl_test_complex/512_mixture
+testDir: your_datapath/test_data/icvl_test_complex/512_mixture
 
 # training settings
 train:
@@ -26,8 +26,8 @@ train:
   checkpoints_per_save: 10
   Datasets: 
     type: icvl
-    trainDir: /data3/jiahua/ly/train_data/icvl_train/train.db/
-    valDir: /data3/jiahua/ly/test_data/icvl_test_complex/512_mixture/
+    trainDir: your_datapath/train_data/icvl_train/train.db/
+    valDir: your_datapath/test_data/icvl_test_complex/512_mixture/
     val_matSize: 5
   scheduler:
     type: MultiStepLR
@@ -42,7 +42,7 @@ train:
 
   resume_opt:
     resume: False
-    resumePath: /home/jiahua/s2s_release/checkpoints/s2s_complex.pth
+    resumePath: /checkpoints/s2s.pth
 
   optim_g:
     type: Adam
@@ -55,5 +55,5 @@ train:
     reduction: mean
 
   clip: !!float 1e6
-  noiseType: complex # ['blind','complex','noniid','mixture']
-  save_path: /data3/jiahua/fidnet_cmp_checkpoints
+  noiseType: complex # ['blind','noniid','complex']
+  save_path: /checkpoints/results
