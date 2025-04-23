@@ -20,20 +20,22 @@ Other competing methods can also be placed in the same folder.
 
 #### The training and testing samples are listed in the following file:
 ```
- basic/utility/icvl_train_list.txt
+basic/utility/icvl_train_list.txt
 
- basic/utility/icvl_test_list.txt
+basic/utility/icvl_test_list.txt
 ```
 #### Prepare the LMDB dataset for training.
 
 ```
 cd basic
+
 python utility/lmdb_data.py
 ```
 #### Prepare the MAT dataset for testing.
 
 ```
 cd basic
+
 python utility/mat_data.py
 ```
 
@@ -47,6 +49,7 @@ Ensure that the model checkpoint path (**save_path**) is correctly set in the co
 
 ```
 cd basic
+
 python run.py -method s2s -mode train
 ```
 
@@ -56,6 +59,7 @@ Please modify the model weight path (**resumePath**) in the configuration file.
 
 ```
 cd basic
+
 python run.py -method s2s -mode test
 ```
 
