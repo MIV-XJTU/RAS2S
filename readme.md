@@ -1,4 +1,4 @@
-## 【ECCV 2024】Region-Aware Sequence-to-Sequence Learning for Hyperspectral Denoising
+## [ECCV 2024] Region-Aware Sequence-to-Sequence Learning for Hyperspectral Denoising
 
 The official PyTorch implementation of our [RAS2S](https://link.springer.com/chapter/10.1007/978-3-031-73027-6_13).
 
@@ -25,7 +25,7 @@ Other competing methods can also be placed in the same folder.
 ### Download
 #### The entire ICVL dataset download from  [here](https://icvl.cs.bgu.ac.il/hyperspectral/).
 
-And thanks to [QRNN3D]([Vandermode/QRNN3D: 3D Quasi-Recurrent Neural Network for Hyperspectral Image Denoising (TNNLS 2020)](https://github.com/Vandermode/QRNN3D)). The division and processing of dataset in this paper are consistent with theirs.
+And thanks to [QRNN3D](https://github.com/Vandermode/QRNN3D). The division and processing of dataset in this paper are consistent with theirs.
 
 ### Processing
 
