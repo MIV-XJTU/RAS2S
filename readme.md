@@ -3,7 +3,13 @@
 The official PyTorch implementation of our [RAS2S](https://link.springer.com/chapter/10.1007/978-3-031-73027-6_13).
 
 ## Install the environment
-Move to `requirements.yaml`.
+
+```
+git clone https://github.com/MIV-XJTU/RAS2S.git
+cd RAS2S
+conda env create -f environment.yml
+conda activate py37
+```
 
 ## Model
 The primary implementation of the RAS2S can be found in the following directory:
@@ -17,32 +23,29 @@ Other competing methods can also be placed in the same folder.
 ## Dataset
 
 ### Download
-#### The entire ICVL dataset download link: https://icvl.cs.bgu.ac.il/hyperspectral/
+#### The entire ICVL dataset download from  [here](https://icvl.cs.bgu.ac.il/hyperspectral/).
 
 ### Processing
 
 #### The training and testing samples are listed in the following file:
 ```
 basic/utility/icvl_train_list.txt
-
 basic/utility/icvl_test_list.txt
 ```
 #### Prepare the LMDB dataset for training.
 
 ```
 cd basic
-
 python utility/lmdb_data.py
 ```
 #### Prepare the MAT dataset for testing.
 
 ```
 cd basic
-
 python utility/mat_data.py
 ```
 
-## Training and Testing
+## Training and Evaluation
 ### Configuration modification
 Once the training and testing datasets are prepared, please ensure that the relevant data paths `trainDir`, `valDir`, and `testDir` are correctly set in the configuration file `options/s2s_hsid.yml`.
 
@@ -52,7 +55,6 @@ Ensure that the model checkpoint path `save_path` is correctly set in the config
 
 ```
 cd basic
-
 python run.py -method s2s -mode train
 ```
 
@@ -62,7 +64,6 @@ Please modify the model weight path `resumePath` in the configuration file.
 
 ```
 cd basic
-
 python run.py -method s2s -mode test
 ```
 
@@ -78,3 +79,7 @@ If any parts of our paper and code help your research, please consider citing us
   year={2024}
 }
 ```
+
+## Acknowledgements
+
+Todo.
