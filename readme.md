@@ -68,8 +68,6 @@ If any parts of our paper and code help your research, please consider citing us
   title={Region-Aware Sequence-to-Sequence Learning for Hyperspectral Denoising},
   author={Xiao, Jiahua and Liu, Yang and Wei, Xing},
   booktitle={European Conference on Computer Vision},
-  pages={218--235},
-  year={2024},
-  organization={Springer}
+  year={2024}
 }
 ```
