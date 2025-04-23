@@ -1,12 +1,15 @@
 # 【ECCV 2024】Region-Aware Sequence-to-Sequence Learning for Hyperspectral Denoising
 
-The official PyTorch implementation of our RAS2S(https://link.springer.com/chapter/10.1007/978-3-031-73027-6_13)
+The official PyTorch implementation of our [RAS2S](https://link.springer.com/chapter/10.1007/978-3-031-73027-6_13).
+
+## Install the environment
+TODO
 
 ## Model
 The primary implementation of the RAS2S can be found in the following directory:
 
 ```
- basic/models/competing_methods/s2s_backbone
+basic/models/competing_methods/s2s_backbone
 ```
 
 Other competing methods can also be placed in the same folder.
@@ -41,11 +44,11 @@ python utility/mat_data.py
 
 ## Training and Testing
 ### Configuration modification
-Once the training and testing datasets are prepared, please ensure that the relevant data paths **trainDir, valDir**, and **testDir** are correctly set in the configuration file (**options/s2s_hsid.yml**).
+Once the training and testing datasets are prepared, please ensure that the relevant data paths `trainDir`, `valDir`, and `testDir` are correctly set in the configuration file `options/s2s_hsid.yml`.
 
 
 ### Training
-Ensure that the model checkpoint path (**save_path**) is correctly set in the configuration file.
+Ensure that the model checkpoint path `save_path` is correctly set in the configuration file.
 
 ```
 cd basic
@@ -55,7 +58,7 @@ python run.py -method s2s -mode train
 
 
 ### Testing
-Please modify the model weight path (**resumePath**) in the configuration file. 
+Please modify the model weight path `resumePath` in the configuration file. 
 
 ```
 cd basic
